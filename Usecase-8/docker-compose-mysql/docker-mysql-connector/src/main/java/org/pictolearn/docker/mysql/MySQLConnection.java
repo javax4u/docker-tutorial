@@ -24,9 +24,9 @@ public class MySQLConnection {
 			try {
 				
 				// Note the way the mysql container is used here.
-				String url = "jdbc:mysql://db:3306/Users?autoReconnect=false&useSSL=false";
-				String user = "root";
-				String password = "root";
+				String url = "jdbc:mysql://"+args[0]+":3306/Users?autoReconnect=false&useSSL=false";
+				String user = args[1];
+				String password = args[2];
 				System.out.println("Connecting to URL " + url);
 				// Load the Connector/J driver
 				Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
