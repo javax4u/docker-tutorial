@@ -28,7 +28,7 @@ public class MySQLConnection {
 			try {
 				
 				// Note the way the mysql container is used here.
-				String url = "jdbc:mysql://"+MYSQL_HOST+":3306/vdoxxdb?autoReconnect=false&useSSL=false";
+				String url = "jdbc:mysql://"+MYSQL_HOST+":3306/vdoxxdb?allowPublicKeyRetrieval=true&autoReconnect=false&useSSL=false";
 				String user = MYSQL_USER;
 				String password = MYSQL_PASSWORD;
 				System.out.println("Connecting to URL " + url);
